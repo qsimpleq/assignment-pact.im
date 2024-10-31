@@ -36,3 +36,16 @@ bundle add active_interaction
 bin/rails g migration add_age_country_email_gender_nationality_patronymic_surname_to_user age:integer country:string email:string gender:string nationality:string patronymic:string surname:string
 bin/rails db:migrate
 ```
+
+### Ответ на вопрос 2:
+
+1. Можно переименовать модель Skil в Skill и убрать в User `class_name: 'Skil'`
+2. Можно в User заменить `has_many :skills, class_name: 'Skil'` на `has_many :skils`
+
+Использую 1 вариант
+
+```shell
+bin/rails g migration rename_skils_to_skills
+# правлю миграцию
+bin/rails db:migrate
+```
