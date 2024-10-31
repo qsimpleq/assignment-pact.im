@@ -55,4 +55,5 @@ bin/rails db:migrate
 # приводим код к общему стилю проекта
 bundle exec rubocop -a
 # Fix typos and naming of skills
+# move validations and user_full_name to model User
 ```
