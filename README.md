@@ -49,3 +49,5 @@ bin/rails g migration rename_skils_to_skills
 # правлю миграцию
 bin/rails db:migrate
 ```
+
+### Добавляю Users::Create из Test specification и начинаем рефакторить
