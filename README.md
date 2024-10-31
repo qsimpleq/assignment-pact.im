@@ -19,3 +19,11 @@ EOF
 
 bundle exec rubocop -a
 ```
+
+```shell
+bin/rails g model user
+bin/rails g model interest user:references
+bin/rails g model skil user:references
+bin/rails g migration add_name_to_user name:string
+bin/rails db:create db:migrate
+```
