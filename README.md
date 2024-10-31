@@ -51,3 +51,8 @@ bin/rails db:migrate
 ```
 
 ### Добавляю Users::Create из Test specification и начинаем рефакторить
+```shell
+# приводим код к общему стилю проекта
+bundle exec rubocop -a
+# Fix typos and naming of skills
+```
