@@ -27,3 +27,7 @@ bin/rails g model skil user:references
 bin/rails g migration add_name_to_user name:string
 bin/rails db:create db:migrate
 ```
+
+```shell
+bundle add active_interaction
+```
