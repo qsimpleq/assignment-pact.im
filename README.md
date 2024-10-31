@@ -50,6 +50,16 @@ bin/rails g migration rename_skils_to_skills
 bin/rails db:migrate
 ```
 
+### Правлю связи
+```shell
+bin/rails g migration CreateInterestsAndUsers
+bin/rails g migration CreateSkillsAndUsers
+bin/rails g migration remove_user_id_from_skills
+bin/rails g migration remove_user_id_from_interests
+bin/rails g migration change_email_unique_to_users
+bin/rails db:migrate
+```
+
 ### Добавляю Users::Create из Test specification и начинаем рефакторить
 ```shell
 # приводим код к общему стилю проекта
