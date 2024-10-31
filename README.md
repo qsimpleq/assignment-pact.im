@@ -31,3 +31,8 @@ bin/rails db:create db:migrate
 ```shell
 bundle add active_interaction
 ```
+
+```shell
+bin/rails g migration add_age_country_email_gender_nationality_patronymic_surname_to_user age:integer country:string email:string gender:string nationality:string patronymic:string surname:string
+bin/rails db:migrate
+```
