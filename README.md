@@ -1,5 +1,7 @@
 # README
 
+[Test specification](https://gist.github.com/wwwermishel/fd2c7973520c270c508720ba3a20e09c)
+
 ## Steps
 
 ```shell
