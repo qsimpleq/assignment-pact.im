@@ -1,6 +1,11 @@
 # README
 
-[Test specification](https://gist.github.com/wwwermishel/fd2c7973520c270c508720ba3a20e09c)
+## [Test specification](https://gist.github.com/wwwermishel/fd2c7973520c270c508720ba3a20e09c)
+
+<summary></summary>
+<details>
+123
+</details>
 
 ## Steps
 
@@ -39,8 +44,9 @@ bin/rails db:migrate
 
 ### Ответ на вопрос 2:
 
-1. Можно переименовать модель Skil в Skill и убрать в User `class_name: 'Skil'`
-2. Можно в User заменить `has_many :skills, class_name: 'Skil'` на `has_many :skils`
+1. Можно переименовать модель Skil в Skill и убрать в User `class_name: 'Skil'` + написать миграцию для консистентности названий
+2. Переименовать модель в Skill и добавить self.table_name = 'skil', чтобы использовать существующую уже таблицу
+3. Использовать Inflections `inflect.plural 'skil', 'skills'`
 
 Использую 1 вариант
 
