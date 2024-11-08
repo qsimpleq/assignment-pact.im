@@ -1,6 +1,6 @@
-class CreateInterestsAndUsers < ActiveRecord::Migration[7.2]
+class CreateInterestsUsers < ActiveRecord::Migration[7.2]
   def change
-    create_table :interests_and_users, id: false do |t|
+    create_table :interests_users, id: false do |t|
       t.timestamps
       t.belongs_to :interest
       t.belongs_to :user

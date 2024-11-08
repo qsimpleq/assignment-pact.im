@@ -1,6 +1,6 @@
-class CreateSkillsAndUsers < ActiveRecord::Migration[7.2]
+class CreateSkillsUsers < ActiveRecord::Migration[7.2]
   def change
-    create_table :skills_and_users, id: false do |t|
+    create_table :skills_users, id: false do |t|
       t.timestamps
       t.belongs_to :skill
       t.belongs_to :user

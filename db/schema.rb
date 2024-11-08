@@ -18,14 +18,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_31_111356) do
     t.index ["name"], name: "index_interests_on_name", unique: true
   end
 
-  create_table "interests_and_users", id: false, force: :cascade do |t|
+  create_table "interests_users", id: false, force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "interest_id"
     t.integer "user_id"
-    t.index ["interest_id", "user_id"], name: "index_interests_and_users_on_interest_id_and_user_id", unique: true
-    t.index ["interest_id"], name: "index_interests_and_users_on_interest_id"
-    t.index ["user_id"], name: "index_interests_and_users_on_user_id"
+    t.index ["interest_id", "user_id"], name: "index_interests_users_on_interest_id_and_user_id", unique: true
+    t.index ["interest_id"], name: "index_interests_users_on_interest_id"
+    t.index ["user_id"], name: "index_interests_users_on_user_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -35,14 +35,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_31_111356) do
     t.index ["name"], name: "index_skills_on_name", unique: true
   end
 
-  create_table "skills_and_users", id: false, force: :cascade do |t|
+  create_table "skills_users", id: false, force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "skill_id"
     t.integer "user_id"
-    t.index ["skill_id", "user_id"], name: "index_skills_and_users_on_skill_id_and_user_id", unique: true
-    t.index ["skill_id"], name: "index_skills_and_users_on_skill_id"
-    t.index ["user_id"], name: "index_skills_and_users_on_user_id"
+    t.index ["skill_id", "user_id"], name: "index_skills_users_on_skill_id_and_user_id", unique: true
+    t.index ["skill_id"], name: "index_skills_users_on_skill_id"
+    t.index ["user_id"], name: "index_skills_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
