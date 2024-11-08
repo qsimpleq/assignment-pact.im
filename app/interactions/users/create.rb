@@ -13,21 +13,21 @@ class Users::Create < ActiveInteraction::Base
   end
 
   def execute
-    user_full_name = "#{params['surname']} #{params['name']} #{params['patronymic']}"
-    user_params = params.except(:interests)
-    user = User.create(user_params.merge(user_full_name))
+    user_params = params.except(:interests, :skills)
+    user = User.create(user_params)
 
-    Interest.where(name: params["interests"]).each do |interest|
-      user.interests = user.interest + interest
-      user.save!
+    if user.valid?
+      params[:interests].each do |interest_name|
+        interest = Interest.find_or_create_by(name: interest_name)
+        user.interests << interest if interest
+      end
+
+      params[:skills].each do |skill_name|
+        skill = Skill.find_or_create_by(name: skill_name)
+        user.skills << skill if skill
+      end
     end
 
-    user_skills = []
-    params["skills"].split(",").each do |skill|
-      skill = Skill.find(name: skill)
-      user_skills = user_skills + [ skill ]
-    end
-    user.skills = user_skills
-    user.save
+    user
   end
 end
