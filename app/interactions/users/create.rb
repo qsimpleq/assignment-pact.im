@@ -1,5 +1,16 @@
 class Users::Create < ActiveInteraction::Base
-  hash :params
+  hash :params do
+    integer :age
+    string :country
+    string :email
+    string :gender
+    string :name
+    string :nationality
+    string :patronymic
+    string :surname
+    array :interests, default: []
+    array :skills, default: []
+  end
 
   def execute
     user_full_name = "#{params['surname']} #{params['name']} #{params['patronymic']}"
