@@ -75,3 +75,13 @@ bundle exec rubocop -a
 ```
 
 ### Добавил создание user a'la API. Проклял немножко ActiveInteraction, в процессе
+
+```shell
+bin/rails s
+# create success
+curl -v --header "Content-Type: application/json" --request POST --data '{"age": 1, "country": "ru", "email": "john@wick", "gender": "male", "name": "John", "nationality": "pol", "patronymic": "your", "surname": "Wick", "skills": ["ruby", "rails"], "interests": ["voleyball"]}' http://localhost:3000/users
+# create failed
+curl -v --header "Content-Type: application/json" --request POST --data '{"age": 1, "country": "ru", "email": "john@wick", "gender": "male", "name": "John", "nationality": "pol", "patronymic": "your", "surname": "Wick", "skills": ["ruby", "rails"], "interests": ["voleyball"]}' http://localhost:3000/users
+```
+
+### Накатал тесты
