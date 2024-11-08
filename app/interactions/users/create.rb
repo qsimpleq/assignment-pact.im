@@ -16,7 +16,7 @@ class Users::Create < ActiveInteraction::Base
     user_params = params.except(:interests, :skills)
     user = User.create(user_params)
 
-    if user.valid?
+    if user.save
       params[:interests].each do |interest_name|
         interest = Interest.find_or_create_by(name: interest_name)
         user.interests << interest if interest

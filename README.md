@@ -73,3 +73,5 @@ bundle exec rubocop -a
 # Fix typos and naming of skills
 # move validations and user_full_name to model User
 ```
+
+### Добавил создание user a'la API. Проклял немножко ActiveInteraction, в процессе
