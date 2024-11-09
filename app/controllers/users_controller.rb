@@ -2,9 +2,7 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :create
 
   def create
-    user = Users::Create.run(params: permitted_params)
-
-    # debugger
+    user = CreateUser.run(params: permitted_params)
 
     if user&.result&.persisted?
       render json: user.result, status: :created

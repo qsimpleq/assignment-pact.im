@@ -1,4 +1,4 @@
-class Users::Create < ActiveInteraction::Base
+class CreateUser < ActiveInteraction::Base
   hash :params do
     integer :age
     string :country
