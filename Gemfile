@@ -45,16 +45,16 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
+group :test do
+  gem "rspec", "~> 3.13"
+  gem "rspec-rails", "~> 7.0"
+end
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
 
-
-gem "rspec-rails", "~> 7.0"
-
 gem "rubocop-rspec", "~> 3.2"
-
 gem "rubocop-rspec_rails", "~> 2.30"
-
 gem "active_interaction", "~> 5.3"
