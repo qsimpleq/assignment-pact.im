@@ -55,6 +55,6 @@ group :development do
   gem "web-console"
 end
 
-gem "rubocop-rspec", "~> 3.2"
+gem "rubocop-rspec", "~> 3.3"
 gem "rubocop-rspec_rails", "~> 2.30"
 gem "active_interaction", "~> 5.3"
